@@ -1,0 +1,24 @@
+{
+  "name": "feedme-branding",
+  "version": "0.1.0",
+  "description": "Brand assets for Feed Me Jefferson",
+  "main": "index.js",
+  "scripts": {
+    "build": "pwa-asset-generator src/chef-jefferson-icon.svg build -s false --icon-only -o false -p '12%' -b '#FFFFFF20'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feedmejefferson/feedme-branding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feedmejefferson/feedme-branding/issues"
+  },
+  "homepage": "https://github.com/feedmejefferson/feedme-branding#readme",
+  "devDependencies": {
+    "pwa-asset-generator": "1.2.0",
+    "svgo": "^1.3.0"
+  }
+}
