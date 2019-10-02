@@ -8,6 +8,7 @@
     "build:copy": "copyfiles -f src/template.html src/manifest.json build",
     "build:splash": "pwa-asset-generator src/splash-screen.svg build/splash build -s false -o false -b '#FFFFFF20' -i build/template.html -m build/manifest.json",
     "build:icon": "pwa-asset-generator src/chefjefferson.svg build/icon -s false --icon-only -o false -p '12%' -b '#FFFFFF20'",
+    "build:iconx": "pwa-asset-generator src/themes/karens-kitchen/icon.html build/themes/karens-kitchen/ -s false --icon-only -o false",
     "build:svg": "svgo -f src -o build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +24,10 @@
   "homepage": "https://github.com/feedmejefferson/feedme-branding#readme",
   "devDependencies": {
     "copyfiles": "^2.1.1",
+    "phantomjs": "^2.1.7",
     "pwa-asset-generator": "1.2.0",
-    "svgo": "^1.3.0"
+    "svgo": "^1.3.0",
+    "webshot": "^0.18.0",
+    "webshot-cli": "^0.3.1"
   }
 }

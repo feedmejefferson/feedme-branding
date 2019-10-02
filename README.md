@@ -1,13 +1,19 @@
 # Feed Me Branding
 
-Just a simple repository for maintaining some of our branding assets -- logos, icons, etc.
+A repository for Feed Me, Jefferson brand assets and style guidelines.
 
-## What to save here
+## Under Contruction
 
-Ideally try to save the original source vector graphic files here. We'll keep those in the "src" (source) folder like on typical software development projects. Normally you wouldn't commit any programattically generated files, but in this case I think it's ok since not everybody is a developer and not everybody will be able to run all of the "build" processes that might get added in here. 
+This repo is going quickly converging on what will hopefully eventually be a meaningful structure. For now see the [doc](doc) folder for any resources that are purely documentational including brand guidelines and style tiles. 
 
-## Javascript and pwa-asset-generator
+The [src](src) folder should contain all of the source files necessary for building the theme specific assets that get deployed with Feed Me, Jefferson. Think of this as a prebuild step for resources that get copied over to the theme folder in the preact based project (and only need to get rebuilt when the mostly static assets change).
 
-I ran across a blog about this tool when I was looking into managing our various icons and splash screens. There are some online tools that take an image and generate a zip file with many of the icon formats and resolutions you'll want, but I'd rather be able to run the process remotely and not have to rely on an online tool. [pwa-asset-generator](https://github.com/onderceylan/pwa-asset-generator) does just that by opening the images/html you tell it to with the styles you want in a headless browser window using the window dimensions of the target image you want to produce and then just takes a screenshot. 
+## Building the Themes
 
-I imagine there are other tools that use different approaches and some of them may be better for what we want, but atleast this gives us somewhere to start.
+Right now there are a few npm scripts in the `package.json` file, but they are potentially out of date. They worked well enough for getting started when we were only building one theme, but now that we've separated out each of the themes into it's own folder, we might need to push the logic into an `index.js` file (we might even use something like webpack). 
+
+## Theme vs Model
+
+In this case, I'm using model in the _**machine learning**_ way rather than in the _**Model/View/Controller**_ type of way. 
+
+Currently our application's build process is combining the food space model and the theme. Ideally each of these would be completely independently pluggable rather than bound together. If we ever get there, then maybe this repo will be 100% responsible for building the theme folder and another repo can be responsible for building a similar model folder. 
